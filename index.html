@@ -1,0 +1,114 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>过儿和姑姑 的浪漫情怀！</title>
+<EMBED src="mp3/Ameritz-Tribute-What_Are_Words.mp3" width="0" height="0" type="audio/mpeg" loop="true" autostart="true" volume="1"></EMBED> 
+<style type="text/css">
+@font-face {
+	font-family: digit;
+	src: url('digital-7_mono.ttf') format("truetype");
+}
+</style>
+
+<link href="css/default.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/garden.js"></script>
+<script type="text/javascript" src="js/functions.js"></script>
+
+</head>
+
+<body>
+
+<div id="mainDiv">
+	<div id="content">
+		<div id="code">
+			<span class="comments">/**</span><br />
+			<span class="space"/><span class="comments">*2017-03-03</span><br />
+			<span class="space"/><span class="comments">*/</span><br />
+			Boy name = <span class="keyword">Mr</span> XuQiang<br />
+			Girl name = <span class="keyword">Mrs</span> XiaoTong<br />
+			<span class="comments">// Fall in love river. </span><br />
+			The boy love the girl;<br />
+			<span class="comments">// So lucky to meet you,in this life.</span><br />
+			And I was wondering if you listening.. right now<br />
+			<span class="comments">// When the light is glowing at the time of the spring.</span><br />
+			With the smell of early rain and buds getting green.<br />
+			<span class="comments">// Is it reviving your hidden memories asleep.</span><br />
+			Now wake up,Now wake up.<br />
+			<span class="comments">// From the past and flee,I can't hear your voice,even if the sound is so sweet.</span><br />
+			<span class="comments">// Regardless of the air and distance between,I can only see your line indistinctly.</span><br />
+			<span class="keyword">The boy</span> very <span class="keyword">happy</span>;<br />
+			<span class="keyword">The girl</span> is also very <span class="keyword">happy</span>;<br />
+			<span class="placeholder"/><span class="comments">// Fading away,I get trapped in this dream.</span><br />
+			<span class="placeholder"/><span class="comments">// Around the world there isn't so much mean to be,</span><br />
+			<span class="placeholder"/><span class="comments">//Miracle happens when the one holds his belief,Behold my love you are everything,</span><br />
+			<span class="placeholder"/><span class="comments">// Eyes on you never leave,Right in the fantasy,</span><br />
+			<span class="placeholder"/><span class="comments">// I am flowing in the stream,Long as the feeling still exist You are all I can see,</span><br />
+			<span class="placeholder"/><span class="comments">// This is the best ending!</span><br />
+			<span class="placeholder"/>Oh I can see,This is the best ending!<br/>
+			<span class="placeholder"/>The boy has but one dream;<br />
+			<span class="comments">// The boy wants the girl could well have been happy.</span><br />
+			<br>
+			<br>
+			I want to say:<br />
+			Baby, I love you forever;<br />
+		</div>
+		<div id="loveHeart">
+			<canvas id="garden"></canvas>
+			<div id="words">
+				<div id="messages">
+					亲爱的姑姑，这是我们相识的时光。
+					<div id="elapseClock"></div>
+				</div>
+				<div id="loveu">
+					希望能一直走一下去，不停留。<br/>
+										情人节快乐！<br/>
+					<div class="signature">- 过儿</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="copyright">
+		<a href="#">....</a><br />
+		<a href="#">....</a><br />
+		
+	</div>
+</div>
+
+<script type="text/javascript">
+var offsetX = $("#loveHeart").width() / 2;
+var offsetY = $("#loveHeart").height() / 2 - 55;
+var together = new Date();
+together.setFullYear(2015, 10, 28);
+together.setHours(20);
+together.setMinutes(0);
+together.setSeconds(0);
+together.setMilliseconds(0);
+
+if (!document.createElement('canvas').getContext) {
+	var msg = document.createElement("div");
+	msg.id = "errorMsg";
+	msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+	document.body.appendChild(msg);
+	$("#code").css("display", "none")
+	$("#copyright").css("position", "absolute");
+	$("#copyright").css("bottom", "10px");
+	document.execCommand("stop");
+} else {
+	setTimeout(function () {
+		startHeartAnimation();
+	}, 5000);
+
+	timeElapse(together);
+	setInterval(function () {
+		timeElapse(together);
+	}, 500);
+
+	adjustCodePosition();
+	$("#code").typewriter();
+}
+</script>
+
+</body>
+</html>
